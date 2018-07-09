@@ -5,9 +5,9 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+export PATH="/Users/rexyz/.rbenv/shims:/Users/rexyz/.pyenv/shims:$PATH"
 
-
-# 色を使用出来るようにする
+ #色を使用出来るようにする
 autoload -Uz colors
 colors
 
