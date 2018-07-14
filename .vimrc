@@ -7,12 +7,13 @@ endif
 set runtimepath+=/Users/rexyz/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/rexyz/.vim/bundle')
-  call dein#begin('/Users/rexyz/.vim/bundle')
+let s:dein_dir = expand('~/.vim/bundle')
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/rexyz/.vim/bundle/repos/github.com/Shougo/dein.vim')
+  "call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
@@ -20,6 +21,9 @@ if dein#load_state('/Users/rexyz/.vim/bundle')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+
+  " TIMLの読込
+  call dein#load_toml('~/.vim/rc/dein.toml', {'lazy': 0})
 
   " Required:
   call dein#end()
@@ -40,3 +44,9 @@ endif
 set termguicolors
 set number
 set clipboard=unnamed
+
+set background=dark
+colorscheme molokai
+syntax on
+
+autocmd VimEnter * execute 'NERDTree'

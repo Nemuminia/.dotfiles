@@ -1,0 +1,62 @@
+# plugin管理
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# 非同期処理全般
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+# 自動補完プラグイン
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+# ファイルランチャー
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+# ファイルエクスプローラー
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# ステータスバー調整
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+# Gitクライアントプラグイン
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# gitのHEADからの変更の表示
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# ウィンドウサイズ変更
+[[plugins]]
+repo = 'simeji/winresizer'
+
+# インデント可視化
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+# シンタックスチェック
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+# プログラムランナー
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+#カラースキーム
+#hybrid
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+#molokai
+[[plugins]]
+repo = 'tomasr/molokai'
+#hTomorrow Theme
+[[plugins]]
+repo = 'chriskempson/vim-tomorrow-theme'
+
+# 
+#[[plugins]]
+#repo = ''

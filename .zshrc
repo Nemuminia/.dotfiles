@@ -7,6 +7,9 @@
 export LANG=ja_JP.UTF-8
 export PATH="/Users/rexyz/.rbenv/shims:/Users/rexyz/.pyenv/shims:$PATH"
 
+# 未定義変数はエラーに
+#set -u
+
  #色を使用出来るようにする
 autoload -Uz colors
 colors
