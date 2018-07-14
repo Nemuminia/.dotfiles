@@ -14,16 +14,6 @@ repo = 'Shougo/deoplete.nvim'
 on_i = 1
 hook_add = 'let g:deoplete#enable_at_startup = 1'
 
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-on_ft = ['ruby']
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-on_ft = ['ruby']
-
 # Rubyの自動補完
 [[plugins]]
 repo = 'Shougo/deoplete-rct'

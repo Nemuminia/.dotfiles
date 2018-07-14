@@ -6,13 +6,29 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
+# NERDTrees
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# Gitクライアントプラグイン
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# gitのHEADからの変更を表示
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
 # colorschema
 [[plugins]]
 repo = 'chriskempson/vim-tomorrow-theme'
+[[plugins]]
+repo = 'tomasr/molokai'
 
 # statusline
 [[plugins]]
-repo = 'itchyny/lightline.vim'
+repo = 'vim-airline/vim-airline'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 # インデントを可視化
 [[plugins]]

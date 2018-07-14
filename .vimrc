@@ -1,7 +1,5 @@
 " 表示・設定系
 
-set termguicolors
-
 set background=dark
 " 挿入モードでTABキーを押した際、対応する数のスペースを入力
 set expandtab
@@ -36,6 +34,8 @@ set belloff=all
 set clipboard=unnamed
 " 行番号を表示
 set number
+set cursorline
+hi clear CursorLine
 " compatibleオプションをオフにする
 set nocompatible
 " 移動コマンドを使ったとき、行頭に移動しない
@@ -45,7 +45,7 @@ set matchpairs& matchpairs+=<:>
 " 対応括弧をハイライト表示する
 set showmatch
 " 対応括弧の表示秒数を3秒にする
-set matchtime=3
+"set matchtime=3
 " ウィンドウの幅より長い行は折り返され、次の行に続けて表示される
 set wrap
 " 入力されているテキストの最大幅を無効にする
@@ -64,7 +64,7 @@ set hidden
 " 新しく開く代わりにすでに開いてあるバッファを開く
 set switchbuf=useopen
 " 小文字の検索でも大文字も見つかるようにする
-set ignorecase
+"set ignorecase
 " ただし大文字も含めた検索の場合はその通りに検索する
 set smartcase
 " インクリメンタルサーチを行う
@@ -195,3 +195,45 @@ nnoremap <C-]> g<C-]>
 " for deoplete.vim
 " 一つ目の候補を選択状態にする
 set completeopt+=noinsert
+
+"NERDTree自動起動
+autocmd VimEnter * execute 'NERDTree'
+"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"ステータスバー
+" モードの表示名を定義(デフォルトだと長くて横幅を圧迫するので略称にしている)
+"let g:airline_mode_map = {
+"    \ '__' : '-',
+"    \ 'n'  : 'N',
+"    \ 'i'  : 'I',
+"    \ 'R'  : 'R',
+"    \ 'c'  : 'C',
+"    \ 'v'  : 'V',
+"    \ 'V'  : 'V',
+"    \ '' : 'V',
+"    \ 's'  : 'S',
+"    \ 'S'  : 'S',
+"    \ '' : 'S',
+"    \ }
+
+" パワーラインでかっこよく
+"let g:airline_powerline_fonts = 1
+" カラーテーマ指定してかっこよく
+let g:airline_theme = 'badwolf'
+" タブバーをかっこよく
+let g:airline#extensions#tabline#enabled = 1
+
+" 選択行列の表示をカスタム(デフォルトだと長くて横幅を圧迫するので最小限に)
+" let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+
+" virtulenvを認識しているか確認用に、現在activateされているvirtualenvを表示(vim-virtualenvの拡張)
+"let g:airline#extensions#virtualenv#enabled = 1
+
+" gitのHEADから変更した行の+-を非表示(vim-gitgutterの拡張)
+let g:airline#extensions#hunks#enabled = 0
+
+" Lintツールによるエラー、警告を表示(ALEの拡張)
+"let g:airline#extensions#ale#enabled = 1
+"let g:airline#extensions#ale#error_symbol = 'E:'
+"let g:airline#extensions#ale#warning_symbol = 'W:'
