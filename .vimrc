@@ -50,3 +50,5 @@ colorscheme molokai
 syntax on
 
 autocmd VimEnter * execute 'NERDTree'
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
