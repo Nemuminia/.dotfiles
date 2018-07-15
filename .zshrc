@@ -209,7 +209,7 @@ if [[ ! -n $TMUX ]]; then
             echo "Create New Session: "$SNAME" (y/n)"
             read RESP
             if [[ "$RESP" = "y" ]]; then
-                tmux new-session -s "$SNAME"
+                tmux new-session -s "$SNAME" \; source-file ~/.tmux/new-session
                 break
             fi
         done

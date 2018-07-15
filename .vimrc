@@ -141,6 +141,7 @@ endif
 
 "End dein Scripts-------------------------
 
+autocmd ColorScheme * highlight Comment ctermfg=62
 " カラースキーマ
 colorscheme molokai
 " シンタックスハイライトの最大行数
